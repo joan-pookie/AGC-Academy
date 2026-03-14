@@ -43,6 +43,24 @@ body {
 
 .page {
   background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/agc logo.jpeg');
+  background-size: 900px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.09;
+  mix-blend-mode: screen;
+  filter: saturate(0.6);
+  transform: translate3d(0, 0, 0);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero {
@@ -52,6 +70,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  z-index: 1;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(5, 5, 5, 0.7));
+  pointer-events: none;
+  z-index: 1;
 }
 .hero::before {
   content: '';
@@ -66,6 +93,23 @@ body {
   pointer-events: none;
   transform: translateX(-50%);
 }
+.hero__image {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(92, 108, 245, 0.45), rgba(15, 23, 42, 0.8)), url('images/school gate.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  filter: saturate(0.85);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
 .hero__glow {
   position: absolute;
   inset: 0;
@@ -92,6 +136,23 @@ body {
   backdrop-filter: blur(18px);
   z-index: 10;
   transition: transform 0.4s ease;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.logo__mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 0.75rem;
+  object-fit: contain;
+  box-shadow: var(--shadow-soft);
 }
 .nav__toggle {
   display: none;
@@ -415,6 +476,27 @@ body {
   align-items: center;
 }
 
+.about__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.25rem;
+}
+
+.about__gallery figure {
+  margin: 0;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.about__gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .about__portrait {
   width: 100%;
   border-radius: 1.25rem;
@@ -469,8 +551,46 @@ body {
   transition: transform 0.4s ease, border 0.4s ease;
 }
 
+.program-card__media {
+  border-radius: 1rem;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
 
-.program-card:hover {
+.program-card__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(15, 23, 42, 0.7));
+}
+
+.program-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.program-card__info h3 {
+  margin: 0;
+}
+
+.program-card--daycare .program-card__media {
+  background-image: url('images/school.jpeg');
+}
+
+.program-card--ecd .program-card__media {
+  background-image: url('images/students.jpeg');
+}
+
+.program-card--cbc .program-card__media {
+  background-image: url('images/student leaders.jpeg');
+}
+
+
   transform: translateY(-8px);
   border-color: rgba(92, 108, 245, 0.4);
 }
@@ -666,6 +786,15 @@ body {
 .contact__socials a:hover {
   transform: translateY(-4px);
 }
+.contact__cta-note {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
 .contact__map-link {
   margin-top: 1.4rem;
   display: flex;
@@ -734,6 +863,14 @@ body {
   height: auto;
   filter: drop-shadow(0 18px 45px rgba(15, 23, 42, 0.4));
 }
+.footer__logo--medium {
+  width: 96px;
+  opacity: 0.85;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0.5rem;
+}
+
 
 .footer__title {
   margin: 0;

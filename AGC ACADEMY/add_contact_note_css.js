@@ -1,0 +1,11 @@
+const fs=require('fs');
+const path='css/style.css';
+let text=fs.readFileSync(path,'utf8');
+const needle='.contact__socials a:hover {';
+const idx=text.indexOf(needle);
+if(idx===-1) throw new Error('needle missing');
+const end=text.indexOf('}', idx);
+if(end===-1) throw new Error('end missing');
+const insert='\n.contact__cta-note {\n  margin-top: 0.6rem;\n  font-size: 0.9rem;\n  color: var(--muted);\n  text-align: center;\n  letter-spacing: 0.15em;\n  text-transform: uppercase;\n}\n';
+text=text.slice(0,end+1)+insert+text.slice(end+1);
+fs.writeFileSync(path,text,'utf8');
