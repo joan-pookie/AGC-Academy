@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGC ACADEMY | Holistic Christian Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero" id="home">
+      <nav class="nav" id="navbar">
+        <div class="logo">
+        <img src="images/agc logo.jpeg" alt="AGC Academy logo" class="logo__mark" />
+        <span>AGC ACADEMY</span>
+      </div>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav__links" id="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#programs">Programs</a>
+          <a href="#contact">Contact</a>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+            <span class="sun"></span>
+            <span class="moon"></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="hero__image" aria-hidden="true"></div>
+      <div class="motto-bar" aria-label="School location">
+        <div class="motto-bar__location">
+          <span class="motto-bar__pin" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 6.6 12.05 6.78 12.25a1 1 0 0 0 1.44 0c.18-.2 6.78-7 6.78-12.25 0-3.86-3.14-7-7-7zm0 16.08C10.2 15.18 6 10.95 6 9c0-3.31 2.69-6 6-6s6 2.69 6 6c0 1.95-4.2 6.18-6 9.08z" /><circle cx="12" cy="9" r="2.5" /></svg>
+          </span>
+          <div class="motto-bar__where">
+            <span class="motto-bar__place">Kaptembwo, Nakuru</span>
+            <small class="motto-bar__addr">P.O. BOX 2814-20100</small>
+          </div>
+        </div>
+        <a class="motto-bar__map" href="https://maps.app.goo.gl/ZBtZuACqYkC2cMPL6" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+
+      <div class="hero__content">
+        <p class="eyebrow">Christian Education in Action</p>
+        <h1>AGC ACADEMY</h1>
+        <p class="hero__motto">In God We Rise</p>
+        <p class="subtitle">
+          AGC Academy is a Christian institution focused on holistic education. We nurture minds and spirits so children
+          can master academics, discipline, and character that empowers them for church and society.
+        </p>
+        <div class="hero__actions">
+          <a class="btn primary" href="#programs">Explore Programs</a>
+          <a class="btn ghost" href="#contact">Contact AGC</a>
+        </div>
+        <div class="hero__info">
+          <div class="hero__stats">
+            <article>
+              <span class="hero__stat-number stat" data-target="12" data-suffix=":1">0</span>
+              <p>Teacher-to-learner ratio</p>
+            </article>
+            <article>
+              <span class="hero__stat-number stat" data-target="98" data-suffix="%">0</span>
+              <p>Retention & continuation</p>
+            </article>
+            <article>
+              <span class="hero__stat-number stat" data-target="7" data-suffix=" yrs">0</span>
+              <p>Years of trusted service</p>
+            </article>
+          </div>
+          <div class="hero__secondary">
+            <a class="btn ghost" href="#impact">Admissions calendar</a>
+            <a class="btn ghost" href="#experience">Campus events</a>
+          </div>
+        </div>
+        <div class="hero__news" aria-live="polite">
+          <span class="hero__news-label">Today at AGC:</span>
+          <p class="hero__news-text" id="hero-news-text"></p>
+        </div>
+        <div class="hero__trust">
+          <span>Christian heritage - Academic excellence - Service</span>
+        </div>
+      </div>
+
+      <div class="hero__crest" aria-hidden="true">
+        <img src="images/logo.svg" alt="AGC Academy crest" class="hero__crest-logo" />
+        <div class="hero__crest-shell">
+          <span>AGC ACADEMY</span>
+          <strong>In God We Rise</strong>
+        </div>
+      </div>
+      <div class="hero__glow" aria-hidden="true"></div>
+    </header>
+
+    <main>
+      <section class="about" id="about">
+  <div class="section__header">
+    <p class="eyebrow">About AGC Academy</p>
+    <h2>Vision, mission, and focus</h2>
+  </div>
+
+  <div class="about__grid">
+    <figure class="about__portrait">
+      <img src="images/school compound.jpeg" alt="AGC Academy learning community" loading="lazy" />
+      <figcaption>Rooted in faith, growing in excellence. Kaptembwo, Nakuru.</figcaption>
+    </figure>
+
+    <div class="about__copy">
+      <p class="about__lead">
+        AGC Academy is a Christian learning community committed to whole-child growth: strong academics, disciplined routines,
+        and character shaped by Christian virtues.
+      </p>
+
+      <div class="about__pillars" role="list">
+        <article class="about-card" role="listitem">
+          <p class="about-card__kicker">Vision</p>
+          <p class="about-card__title">Transform lives through holistic education.</p>
+          <p class="about-card__body">Quality, results, and a foundation that prepares learners for church and society.</p>
+        </article>
+
+        <article class="about-card" role="listitem">
+          <p class="about-card__kicker">Mission</p>
+          <p class="about-card__title">Empower today's children for tomorrow's leadership.</p>
+          <p class="about-card__body">We nurture responsible, God-fearing leaders through learning, mentorship, and service.</p>
+        </article>
+
+        <article class="about-card" role="listitem">
+          <p class="about-card__kicker">Focus</p>
+          <p class="about-card__title">What we build every day</p>
+          <ul class="about-card__list">
+            <li>Academic excellence with personal attention</li>
+            <li>Christian character and values</li>
+            <li>Discipline, confidence, and leadership</li>
+            <li>Co-curricular growth (arts, sports, clubs)</li>
+            <li>Service to the community</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="impact" id="impact">
+        <div class="section__header">
+          <p class="eyebrow">Impact & Values</p>
+          <h2>We measure success by character and achievement.</h2>
+        </div>
+        <div class="impact__grid">
+          <article class="impact-card">
+            <p class="impact__label">Students empowered yearly</p>
+            <p class="stat" data-target="240">0</p>
+            <span>Holistic learning rooted in faith.</span>
+          </article>
+          <article class="impact-card">
+            <p class="impact__label">Average class size</p>
+            <p class="stat" data-target="18">0</p>
+            <span>Personal attention and strong discipline.</span>
+          </article>
+          <article class="impact-card">
+            <p class="impact__label">Scholarships supported</p>
+            <p class="stat" data-target="32">0</p>
+            <span>Children from all backgrounds join the community.</span>
+          </article>
+        </div>
+        <div class="impact__values">
+          <span>Christian Living</span>
+          <span>Academic Excellence</span>
+          <span>Community Service</span>
+          <span>Leadership Formation</span>
+        </div>
+        <div class="impact__cta">
+          <div>
+            <p class="impact__cta-label">Plan a visit or virtual tour</p>
+            <h3>Experience AGC Academy first-hand.</h3>
+            <p>Schedule a guided campus tour or discovery call to meet our teachers, explore classrooms, and sense the rhythm of worship, study, and play.</p>
+          </div>
+          <div class="impact__cta-actions">
+            <a class="btn primary" href="#contact">Book a Visit</a>
+            <a class="btn ghost" href="#contact">Request More Info</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience" id="experience">
+        <div class="section__header">
+          <p class="eyebrow">Experience the difference</p>
+          <h2>Why families choose AGC Academy.</h2>
+        </div>
+        <div class="experience__grid">
+          <article class="experience-card">
+            <span class="experience-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 11l8-4 8 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 20V10" stroke-width="1.5" stroke-linecap="round"/><path d="M4 16h16" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Day-to-day rhythm</h3>
+            <p>Daily devotionals, positive reinforcement, and safe high-tech classrooms keep children curious and confident.</p>
+          </article>
+          <article class="experience-card">
+            <span class="experience-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9v6" stroke-width="1.5" stroke-linecap="round"/><path d="M18 9v6" stroke-width="1.5" stroke-linecap="round"/><path d="M3 12h18" stroke-width="1.5" stroke-linecap="round"/><path d="M4 15l4-4 4 4" stroke-width="1.5" stroke-linecap="round"/><path d="M20 15l-4-4-4 4" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Community & partnerships</h3>
+            <p>Parent leadership forums, community service days, and alumni mentorships turn the school into a ministry hub.</p>
+          </article>
+          <article class="experience-card">
+            <span class="experience-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2" stroke-width="1.5"/><path d="M3 9h18" stroke-width="1.5" stroke-linecap="round"/><path d="M8 2v3" stroke-width="1.5" stroke-linecap="round"/><path d="M16 2v3" stroke-width="1.5" stroke-linecap="round"/><path d="M7 14h3" stroke-width="1.5" stroke-linecap="round"/><path d="M14 14h3" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Events & celebrations</h3>
+            <p>Quarterly mission showcases, literary festivals, and sports meets spotlight student talents and Christian hospitality.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pulse" id="pulse">
+        <div class="section__header">
+          <p class="eyebrow">AGC Pulse</p>
+          <h2>Today's energy and focus.</h2>
+        </div>
+        <div class="pulse__grid">
+          <article class="pulse-card">
+            <h3>Morning devotion</h3>
+            <p>Chapel begins at 7:15 am with student-led worship and scripture reflections.</p>
+          </article>
+          <article class="pulse-card">
+            <h3>Community highlight</h3>
+            <p>Parents & staff are partnering to refurbish the reading corner before the term break.</p>
+          </article>
+          <article class="pulse-card">
+            <h3>Spotlight moment</h3>
+            <p>Grade 6 leaders mentor Grade 1 learners during mentorship hour - collaboration in action.</p>
+          </article>
+        </div>
+      </section>
+
+
+      <section class="programs" id="programs">
+        <div class="section__header">
+          <p class="eyebrow">Programs Offered</p>
+          <h2>Holistic learning for every stage.</h2>
+        </div>
+        <div class="programs__grid">
+          <article class="program-card program-card--daycare">
+            <div class="program-card__media">
+              <img src="images/school.jpeg" alt="Daycare learners at AGC Academy" loading="lazy" />
+            </div>
+            <div class="program-card__info">
+              <h3>Daycare Services</h3>
+              <p>Safe, loving care for our littlest learners with playful routines grounded in Christian stories and rhythms.</p>
+            </div>
+          </article>
+          <article class="program-card program-card--ecd">
+            <div class="program-card__media">
+              <img src="images/students.jpeg" alt="ECD classroom community at AGC Academy" loading="lazy" />
+            </div>
+            <div class="program-card__info">
+              <h3>ECD School</h3>
+              <p>Early childhood development where foundational literacy, numeracy, and character habits are introduced joyfully.</p>
+            </div>
+          </article>
+          <article class="program-card program-card--cbc">
+            <div class="program-card__media">
+              <img src="images/student leaders.jpeg" alt="CBC learners and student leaders at AGC Academy" loading="lazy" />
+            </div>
+            <div class="program-card__info">
+              <h3>CBC Primary Education</h3>
+              <p>CBC-compliant classrooms for Grades 1 to 6 where discovery learning meets discipline, technology, and spiritual formation.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials">
+        <div class="section__header">
+          <p class="eyebrow">Parent voices</p>
+          <h2>Families trust AGC Academy</h2>
+        </div>
+        <div class="testimonial-card" id="testimonial-card">
+          <p class="testimonial-text"></p>
+          <div class="testimonial-meta">
+            <span class="testimonial-name"></span>
+            <span class="testimonial-role"></span>
+          </div>
+        </div>
+        <div class="testimonial-controls" id="testimonial-controls"></div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="section__header">
+          <p class="eyebrow">Reach AGC Academy</p>
+          <h2>Contact the school office</h2>
+        </div>
+        <div class="contact__grid">
+          <form class="contact__form">
+            <label>
+              <span>Name</span>
+              <input type="text" placeholder="Your name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" placeholder="you@email.com" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea rows="5" placeholder="Tell us what you are looking for" required></textarea>
+            </label>
+            <button type="submit" class="btn primary">Send Message</button>
+          </form>
+          <div class="contact__details">
+            <div class="contact__detail">
+              <span class="contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2H6a1 1 0 0 0-1 1v19h14V3a1 1 0 0 0-1-1zM8 20h2v-3H8zm0-4h2v-3H8zm4 4h2v-3h-2zm0-4h2v-3h-2z" /></svg>
+              </span>
+              <div>
+                <strong>School Name</strong>
+                <p>AGC Academy</p>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 6.6 12.05 6.78 12.25a1 1 0 0 0 1.44 0c.18-.2 6.78-7 6.78-12.25 0-3.86-3.14-7-7-7zm0 16.08C10.2 15.18 6 10.95 6 9c0-3.31 2.69-6 6-6s6 2.69 6 6c0 1.95-4.2 6.18-6 9.08z" /><circle cx="12" cy="9" r="2.5" /></svg>
+              </span>
+              <div>
+                <strong>Address</strong>
+                <p>P.O. BOX 2814-20100</p>
+                <p>Nakuru, Kenya</p>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z" /></svg>
+              </span>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:kaptembwoagcacademy@gmail.com">kaptembwoagcacademy@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.24 10.36 10.36 0 0 0 3.25.52 1 1 0 0 1 1 1v3.79a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.8a1 1 0 0 1 1 1 10.36 10.36 0 0 0 .52 3.25 1 1 0 0 1-.24 1z" /></svg>
+              </span>
+              <div>
+                <strong>Phone</strong>
+                <p>0769035648</p>
+                <p>0723144623</p>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" /></svg>
+              </span>
+              <div>
+                <strong>School Administrator</strong>
+                <p>Emmy Rotich</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact__socials">
+            <p class="contact__social-label">Connect with us</p>
+            <a href="https://www.facebook.com/groups/1464309964624216/" target="_blank" rel="noopener" aria-label="AGC Academy Facebook community">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22V13.5h2.75l.4-2.75H13.5V8.3c0-.8.2-1.35 1.35-1.35h1.45V4.1a20.3 20.3 0 0 0-2.25-.1c-2.23 0-3.75 1.35-3.75 3.8v2.12H8.7v2.75h1.8V22h3z"/></svg>
+            </a>
+          </div>
+          <div class="contact__cta-note">Message us on Facebook for admissions & tours.</div>
+          </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="images/agc logo.jpeg" alt="AGC Academy logo" class="footer__logo footer__logo--mark" />
+      <div class="footer__brand-copy">
+        <p class="footer__title">AGC ACADEMY</p>
+        <p class="footer__motto">In God We Rise</p>
+        <p class="footer__tagline">Holistic Christian education for the next generation.</p>
+      </div>
+    </div>
+
+    <nav class="footer__links" aria-label="Footer">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#experience">Campus</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <p class="footer__legal">Ãƒâ€šÃ‚Â© 2026 AGC Academy. All rights reserved.</p>
+  <button class="back-to-top" id="back-to-top">Back to top</button>
+</footer>
+
+
+
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

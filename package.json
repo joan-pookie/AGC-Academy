@@ -1,0 +1,14 @@
+{
+  "name": "agc-academy",
+  "version": "1.0.0",
+  "description": "This project is a single-page, responsive portfolio-style website that showcases AGC Academy — a Christian education institution based in Kaptembwo, Nakuru. The experience uses minimalist styling, glassmorphism-inspired cards, gradient accents, and animated elements while remaining lightweight, accessible, and mobile-friendly.",
+  "main": "add_contact_note.js",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": ["AGC", "Academy", "Portfolio", "Website"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
