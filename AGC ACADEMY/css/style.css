@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --surface: rgba(255, 255, 255, 0.8);
   --text: #09090a;
   --muted: #5c5f6d;
@@ -1094,4 +1094,264 @@ body {
 .testimonial-dot.active {
   background: var(--accent);
   transform: scale(1.15);
+}
+
+/* ===== About (Vision/Mission/Focus) refresh ===== */
+.about__lead {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.about__portrait {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow);
+  background: var(--gradient);
+}
+
+.about__portrait img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.95) contrast(1.05);
+}
+
+.about__portrait figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.9rem 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.65));
+  letter-spacing: 0.02em;
+}
+
+.about__pillars {
+  margin: 1.25rem 0 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+.about-card {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: var(--shadow-soft);
+  border-radius: 1rem;
+  padding: 1rem 1.1rem;
+}
+
+.about-card__kicker {
+  margin: 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.about-card__title {
+  margin: 0.5rem 0 0.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.about-card__body {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.about-card__list {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.about-card__list li {
+  margin: 0.25rem 0;
+}
+
+/* ===== Footer refresh (clean brand, no awkward duplication) ===== */
+.footer {
+  padding: 3.25rem clamp(1.25rem, 4vw, 4rem);
+  gap: 1.25rem;
+}
+
+.footer__inner {
+  width: min(980px, 100%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+.footer__logo--mark {
+  width: 84px;
+  height: 84px;
+  border-radius: 1.1rem;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.35);
+}
+
+.footer__brand-copy {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.footer__title {
+  font-size: 0.85rem;
+  letter-spacing: 0.24em;
+}
+
+.footer__motto {
+  font-size: 0.95rem;
+  letter-spacing: 0.22em;
+}
+
+.footer__tagline {
+  margin: 0;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  justify-content: center;
+}
+
+.footer__links a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.footer__links a:hover,
+.footer__links a:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer__legal {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 640px) {
+  .footer__inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer__brand {
+    justify-content: center;
+  }
+}
+
+/* ===== Location bar polish ===== */
+.motto-bar {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  padding: 0.85rem 1.1rem;
+}
+
+.motto-bar__location {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.motto-bar__pin {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: rgba(92, 108, 245, 0.12);
+  border: 1px solid rgba(92, 108, 245, 0.25);
+}
+
+.motto-bar__pin svg {
+  width: 18px;
+  height: 18px;
+}
+
+.motto-bar__where {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.motto-bar__place {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.motto-bar__addr {
+  display: block;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: var(--muted);
+}
+
+.motto-bar__map {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text);
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.12);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.motto-bar__map:hover,
+.motto-bar__map:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 640px) {
+  .motto-bar {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .motto-bar__location {
+    justify-content: center;
+  }
 }
