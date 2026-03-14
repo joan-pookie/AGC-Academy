@@ -1,0 +1,8 @@
+const fs = require('fs');
+const path = 'js/script.js';
+let content = fs.readFileSync(path, 'utf8');
+const oldNews = `const heroNewsText = document.getElementById('hero-news-text');\r\nconst heroNewsItems = [\r\n  'Chapel devotion starts at 7:15am with students leading worship.',\r\n  'Admissions tours for 2026 close in two weeks?secure your spot.',\r\n  'After-school clubs celebrate STEAM, soccer, and choir meetups today.'\r\n];\r\nlet heroNewsIndex = 0;\r\nconst rotateHeroNews = () => {\r\n  if (!heroNewsText) return;\r\n  heroNewsText.textContent = heroNewsItems[heroNewsIndex];\r\n  heroNewsIndex = (heroNewsIndex + 1) % heroNewsItems.length;\r\n};\r\nif (heroNewsText) {\r\n  rotateHeroNews();\r\n  setInterval(rotateHeroNews, 4500);\r\n}\r\n\r\n`;
+const newNews = `const heroNewsText = document.getElementById('hero-news-text');\r\nconst heroNewsItems = [\r\n  'Chapel devotion starts at 7:15am with students leading worship.',\r\n  'Admissions tours for 2026 close in two weeks—secure your spot.',\r\n  'After-school clubs celebrate STEAM, soccer, and choir meetups today.'\r\n];\r\nlet heroNewsIndex = 0;\r\nconst rotateHeroNews = () => {\r\n  if (!heroNewsText) return;\r\n  heroNewsText.textContent = heroNewsItems[heroNewsIndex];\r\n  heroNewsIndex = (heroNewsIndex + 1) % heroNewsItems.length;\r\n};\r\nif (heroNewsText) {\r\n  rotateHeroNews();\r\n  setInterval(rotateHeroNews, 4500);\r\n}\r\nconst heroCrest = document.querySelector('.hero__crest');\r\nif (heroCrest) {\r\n  setTimeout(() => heroCrest.classList.add('hero__crest--visible'), 650);\r\n}\r\n\r\n`;
+if (!content.includes(oldNews)) throw new Error('hero news block missing');
+content = content.replace(oldNews, newNews);
+fs.writeFileSync(path, content, 'utf8');

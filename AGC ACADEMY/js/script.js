@@ -53,6 +53,54 @@ document.querySelectorAll('section').forEach(section => {
   revealObserver.observe(section);
 });
 
+const statElements = document.querySelectorAll('.stat');
+const animateStatValue = stat => {
+  const target = Number(stat.dataset.target) || 0;
+  const suffix = stat.dataset.suffix || "";
+  let current = 0;
+  const step = Math.max(1, Math.round(target / 120));
+  const interval = setInterval(() => {
+    current += step;
+    if (current >= target) {
+      stat.textContent = target + suffix;
+      clearInterval(interval);
+      return;
+    }
+    stat.textContent = current + suffix;
+  }, 15);
+};
+
+const statObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    animateStatValue(entry.target);
+    observer.unobserve(entry.target);
+  });
+}, { threshold: 0.4 });
+
+statElements.forEach(stat => statObserver.observe(stat));
+
+const heroNewsText = document.getElementById('hero-news-text');
+const heroNewsItems = [
+  'Chapel devotion starts at 7:15am with students leading worship.',
+  'Admissions tours for 2026 close in two weeks - secure your spot.',
+  'After-school clubs celebrate STEAM, soccer, and choir meetups today.'
+];
+let heroNewsIndex = 0;
+const rotateHeroNews = () => {
+  if (!heroNewsText) return;
+  heroNewsText.textContent = heroNewsItems[heroNewsIndex];
+  heroNewsIndex = (heroNewsIndex + 1) % heroNewsItems.length;
+};
+if (heroNewsText) {
+  rotateHeroNews();
+  setInterval(rotateHeroNews, 4500);
+}
+const heroCrest = document.querySelector('.hero__crest');
+if (heroCrest) {
+  setTimeout(() => heroCrest.classList.add('hero__crest--visible'), 650);
+}
+
 const testimonials = [
   {
     text: 'AGC Academy has made academic progress exciting for our first grader while keeping Christian values at the heart of the classroom.',
